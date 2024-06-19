@@ -2,13 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-const ClientAuth = ({ navigation }) => {
-    const handleContinue = () => {
-        // Add your authentication logic here
-        // On successful authentication, navigate to ClientDashboard
-        navigation.navigate('ClientDashboard');
-    };
-
+const BarberAuth = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Enter your mobile number</Text>
@@ -16,7 +10,7 @@ const ClientAuth = ({ navigation }) => {
                 <Text style={styles.inputText}>+1 (201) 555-0123</Text>
                 <FontAwesome name="user" size={24} color="black" />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.continueButton} onPress={handleContinue}>
+            <TouchableOpacity style={styles.continueButton}>
                 <Text style={styles.continueButtonText}>Continue</Text>
             </TouchableOpacity>
             <Text style={styles.orText}>or</Text>
@@ -126,4 +120,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ClientAuth;
+export default BarberAuth;
